@@ -1,0 +1,36 @@
+buildscript {
+  repositories {
+    jcenter()
+  }
+  dependencies {
+    classpath "io.ratpack:ratpack-gradle:1.8.0"
+    classpath "com.github.jengelman.gradle.plugins:shadow:6.1.0"
+    classpath "com.github.ben-manes:gradle-versions-plugin:0.36.0"
+  }
+}
+
+plugins {
+    id 'idea'
+    id 'eclipse'
+    id 'io.ratpack.ratpack-groovy' version "1.8.0"
+    id "com.github.johnrengelman.shadow" version "6.1.0"
+    id "com.github.ben-manes.versions" version "${gradleVersionsPlugin}"
+}
+
+repositories {
+  jcenter()
+}
+
+dependencies {
+    runtimeOnly('org.slf4j:slf4j-simple:1.7.30')
+
+    //Groovy
+   implementation("org.codehaus.groovy:groovy-all:2.5.14")
+  // implementation("org.codehaus.groovy:groovy-all:3.0.7")
+
+  testImplementation "org.spockframework:spock-core:1.3-groovy-2.5"
+  // testCompile("org.spockframework:spock-core:2.0-M4-groovy-3.0")
+
+    //postgres
+    runtimeOnly("org.postgresql:postgresql:${postgresqlVersion}")
+}
