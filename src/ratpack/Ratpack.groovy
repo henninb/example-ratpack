@@ -3,43 +3,44 @@ import ratpack.config.ConfigData
 import ratpack.config.ConfigDataBuilder
 import ratpack.groovy.sql.SqlModule
 import ratpack.groovy.template.MarkupTemplateModule
+import ratpack.hikari.HikariModule
 
 import static ratpack.groovy.Groovy.groovyMarkupTemplate
 import static ratpack.groovy.Groovy.ratpack
 
+
 ratpack {
-  bindings {
+    serverConfig {
+        port(5050)
+    }
+    bindings {
 
-      def map = ['postgres.user'        : 'postgres',
-                                 'postgres.password'    : 'secret',
-                                 'postgres.portNumber'  : 5432,
-                                 'postgres.databaseName': 'postgres',
-                                 'postgres.serverName'  : '192.168.99.100'] as Map<String, String>
+        module MarkupTemplateModule
+        module(HikariModule) { config ->
+            //org.postgresql.ds.PGPoolingDataSource
+            config.dataSourceClassName = 'org.postgresql.ds.PGSimpleDataSource'
 
-      final ConfigData configData = ConfigData.of { ConfigDataBuilder builder ->
-          builder.props(map)
-          builder.build()
-      }
+            config.addDataSourceProperty("serverName", "localhost")
+            config.addDataSourceProperty("databaseName", "finance_db")
+            config.addDataSourceProperty("portNumber", "5432")
+            config.addDataSourceProperty("user", "henninb")
+            config.addDataSourceProperty("password", "monday1")
 
-      // Create instance of PostgresConfig
-      // that is used for the
-      // configurable module PostgresModule.
-      //bindInstance (PostgresConfig, configData.get('/postgres', PostgresConfig) as Object)
-      // Initialise module to create DataSource.
-      //module PostgresModule
-
-
-      //module SqlModule
-    module MarkupTemplateModule
+            config.setMaximumPoolSize(10)
+            config.setMinimumIdle(30000) // mill
+            config.setIdleTimeout(1) // minutes
+            config.setConnectionTimeout(1500) // mill
+        }
+        //module(DbModule)
 
 
-  }
-
-  handlers {
-    get {
-      render groovyMarkupTemplate("index.gtpl", title: "My Finance App")
     }
 
-    files { dir "public" }
-  }
+    handlers {
+        get {
+            render groovyMarkupTemplate("index.gtpl", title: "My Finance App")
+        }
+
+        files { dir "public" }
+    }
 }
