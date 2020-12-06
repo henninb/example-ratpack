@@ -1,0 +1,7 @@
+{
+  "serverName": "localhost",
+  "user": "henninb",
+  "password": "monday1",
+  "databaseName": "finance_db",
+  "portNumber": 5432
+}

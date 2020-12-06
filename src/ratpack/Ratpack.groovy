@@ -1,7 +1,3 @@
-import postgres.PostgresModule
-import ratpack.config.ConfigData
-import ratpack.config.ConfigDataBuilder
-import ratpack.groovy.sql.SqlModule
 import ratpack.groovy.template.MarkupTemplateModule
 import ratpack.hikari.HikariModule
 
@@ -12,13 +8,16 @@ import static ratpack.groovy.Groovy.ratpack
 ratpack {
     serverConfig {
         port(5050)
+        //json("dbconfig.json")
+        //require("/daatabase", PostgresConfig)
     }
     bindings {
 
         module MarkupTemplateModule
         module(HikariModule) { config ->
-            //org.postgresql.ds.PGPoolingDataSource
-            config.dataSourceClassName = 'org.postgresql.ds.PGSimpleDataSource'
+            //org.postgresql.ds.
+            //config.dataSourceClassName = 'org.postgresql.ds.PGSimpleDataSource'
+            config.dataSourceClassName = 'org.postgresql.ds.PGPoolingDataSource'
 
             config.addDataSourceProperty("serverName", "localhost")
             config.addDataSourceProperty("databaseName", "finance_db")
@@ -31,9 +30,6 @@ ratpack {
             config.setIdleTimeout(1) // minutes
             config.setConnectionTimeout(1500) // mill
         }
-        //module(DbModule)
-
-
     }
 
     handlers {
