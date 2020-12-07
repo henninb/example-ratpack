@@ -4,7 +4,7 @@ import finance.services.ExampleService
 class ExampleModule extends AbstractModule {
     @Override
     protected void configure() {
-        bind(ExampleService) //.to(BrandRateKPI).in(Scopes.SINGLETON)
+        bind(ExampleService)
     }
 }
 

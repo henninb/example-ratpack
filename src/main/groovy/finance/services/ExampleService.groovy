@@ -20,12 +20,14 @@ class ExampleService implements Service {
 
     @Override
     void onStart(StartEvent event) throws Exception {
-        createTables()
+        sql.execute("drop table if exists public.t_example")
+        sql.execute("create table public.t_example (id varchar(36) primary key, name text)")
+        println 'onStart for ExampleService was called.'
     }
 
     void createTables() {
-        sql.execute("drop table if exists hubs")
-        sql.execute("create table public.hubs (id varchar(36) primary key, name VARCHAR (256), hardwareType VARCHAR (256)); commit")
+        sql.execute("drop table if exists public.t_example")
+        sql.execute("create table public.t_example (id varchar(36) primary key, name text)")
     }
 
     private Sql getSql() {
