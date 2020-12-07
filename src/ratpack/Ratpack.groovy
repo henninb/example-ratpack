@@ -17,15 +17,13 @@ import static ratpack.groovy.Groovy.ratpack
 ratpack {
     serverConfig {
         port(5050)
-        //json("dbconfig.json")
+        json('dbconfig.json')
         //require("/daatabase", PostgresConfig)
     }
     bindings {
 
         module MarkupTemplateModule
         module(HikariModule) { config ->
-            //org.postgresql.ds.
-            //config.dataSourceClassName = 'org.postgresql.ds.PGSimpleDataSource'
             config.dataSourceClassName = 'org.postgresql.ds.PGPoolingDataSource'
 
             config.addDataSourceProperty("serverName", "localhost")
@@ -43,18 +41,9 @@ ratpack {
     }
 
     handlers {
-
-//        //ExampleService exampleService ->
-//            get ('example') {
-//                exampleService.createTables()
-////                hospitalService.fetchAll().then { hospitals ->
-////                    render handlebarsTemplate("hospitals.html", model: [created: hospitals])
-////                }
-//            }
-
         //get("health", HealthCheckHandler)
         get {
-            render groovyMarkupTemplate("index.gtpl", title: "My Finance App")
+            render groovyMarkupTemplate('index.gtpl', title: 'My Finance App')
         }
 
         get( 'example') { Context ctx, ExampleService exampleService ->
@@ -62,19 +51,24 @@ ratpack {
             ctx.request.getBody().then{typed ->
                 //render json(executor.execute(typed.text))
                 exampleService.createTables()
-                "test"
+                render('test')
             }
         }
 
         get('transaction') { Context ctx ->
             Connection connection = ctx.get(DataSource.class).getConnection()
-            PreparedStatement queryStatement = connection.prepareStatement("SELECT description FROM t_transaction WHERE transaction_id=?")
-            queryStatement.setInt(1, Integer.parseInt("10001"))
+            PreparedStatement queryStatement = connection.prepareStatement('SELECT description FROM t_transaction WHERE transaction_id=?')
+            queryStatement.setInt(1, Integer.parseInt('10001'))
             ResultSet resultSet = queryStatement.executeQuery()
             resultSet.next()
             render resultSet.getString(1)
         }
 
-        files { dir "public" }
+        get('groovy') {
+            def x = [1,2,3,4,5]
+            x.first()
+        }
+
+        files { dir 'public' }
     }
 }

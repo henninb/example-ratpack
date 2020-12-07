@@ -20,23 +20,15 @@ class ExampleService implements Service {
 
     @Override
     void onStart(StartEvent event) throws Exception {
-        //Note this is not a best practice only here for the demo
-        //Use DB migrations like liquidbase or flyway
         createTables()
     }
 
     void createTables() {
-        sql.execute("drop table if exists hubs;")
-        sql.execute("create table hubs (id varchar(36) primary key, name VARCHAR (256), hardwareType VARCHAR (256))")
-
+        sql.execute("drop table if exists hubs")
+        sql.execute("create table public.hubs (id varchar(36) primary key, name VARCHAR (256), hardwareType VARCHAR (256)); commit")
     }
 
     private Sql getSql() {
         new Sql(dataSource)
     }
-
 }
-
-
-
-
