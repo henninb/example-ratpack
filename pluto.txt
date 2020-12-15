@@ -1,0 +1,268 @@
+Ch. 50|Pluto 007|movies
+Ch. 51|TV spotlight|movies
+Ch. 54|Action|movies
+Ch. 57|Comedy|movies
+Ch. 60|Drama|movies
+Ch. 66|Pluto TV Fantastic|movies
+ch. 70|Romance|movies
+Ch. 73|Pluto Crime Movies|movies
+ch. 74|Thrillers|movies
+ch. 75|Horror|movies
+ch. 76|The Challenge|movies
+ch. 80|Black Cinema|movies
+ch. 90|Pluto Staff Picks|movies
+ch. 91|Documentaries|movies
+ch. 94|90’s Throwback|movies
+ch. 95|80’s Rewind|movies
+ch. 96|70’s rewind|movies
+ch. 100|Movie Channel|movies
+ch. 103|CMT Westerns|movies
+ch. 106|Classic Movies|movies
+ch. 109|Cult Films|movies
+ch. 112|Flicks of Fury|movies
+ch. 115|The Asylum|movies
+
+ch. 250|Pluto Christmas|seasonal
+ch. 251|Pluto Mistletoe|seasonal
+ch. 254|Fireplace|seasonal
+ch. 255|Holiday Lights|seasonal
+ch. 257|vevo Holiday|seasonal
+
+ch. 127|Showtime Select|Entertainment
+ch. 130|TV Land Drama|Entertainment
+ch. 135|stories amc|Entertainment
+ch. 138|90210|Entertainment
+ch. 142|Baywatch|Entertainment
+ch. 144|Degrassi|Entertainment
+ch. 147|Pluto TV Love Stories|Entertainment
+ch. 149|Pluto TV Suspense|Entertainment
+ch. 150|Star Trek|Entertainment
+ch. 151|Sci Fi|Entertainment
+ch. 154|British TV|Entertainment
+ch. 159|nosey|Entertainment
+ch. 160|Judge nosey|Entertainment
+ch. 165|Deal or no Deal|Entertainment
+ch. 167|Game Show Central|Entertainment
+ch. 172|Demand Africa|Entertainment
+ch. 174|Bet Pluto TV|Entertainment
+ch. 175|BET Her Pluto TV|Entertainment
+ch. 178|MTV pluto tv|Entertainment
+ch. 182|CMT pluto tv|Entertainment
+ch. 187|logo Pluto tv|Entertainment
+ch. 190|ET Live|Entertainment
+ch. 192|People tv|Entertainment
+ch. 194|awesomeness tv|Entertainment
+ch. 197|complex|Entertainment
+
+Ch. 200|Election 2020|news and opinion
+ch. 202|Pluto News|news and opinion
+ch. 204|CBSN|news and opinion
+ch. 209|CNN|news and opinion
+ch. 213|NBC News Now|news and opinion
+ch. 217|WeatherNation|news and opinion
+ch. 221|Sky News|news and opinion
+ch. 224|Bloomberg Television|news and opinion
+ch. 226|cheddar|news and opinion
+ch. 228|CNET|news and opinion
+ch. 230|BNC 24/7|news and opinion
+ch. 232|Top Stories by Newsie|news and opinion
+ch. 234|Today|news and opinion
+ch. 236|Newsmax TV|news and opinion
+ch. 238|Blaze Live|news and opinion
+ch. 240|Americas Voice|news and opinion
+ch. 242|OAN Encore|news and opinion
+ch. 244|The First|news and opinion
+ch. 246|TYT Network|news and opinion
+
+ch. 275|Reality|Reality
+ch. 276|Lives|reality
+ch. 277|rescue 911|reality
+ch. 282|VH1 I love Reality|reality
+ch. 283|Love & Hip Hop|reality
+ch. 284|VH1 Hip Hop Family|reality
+ch. 285|Black Ink Crew|reality
+ch. 290|Spike Pluto|reality
+ch. 291|Spike Outdoors|reality
+ch. 294|Hells Kitchen|reality
+ch. 96|Survivor|reality
+ch. 97|The Amazing Race|reality
+ch. 298|The Challenge|reality
+ch. 301|Fear Factor|reality
+ch. 303|American Gladiator|reality
+ch. 305|Wipeout|reality
+ch. 310|All WE Reality|reality
+ch. 315|Dallas Cowboys Cheerleaders|reality
+ch. 320|Celebrity|reality
+ch. 330|MTV Dating|reality
+ch. 332|MTV Teen|reality
+ch. 340|people are Awesome|reality
+
+ch. 350|Pluto Crime Drama|crime
+ch. 355|CSI|crime
+ch. 358|Narcos|crime
+ch. 365|True Crime|crime
+ch. 367|COPS|crime
+ch. 370|Forensic Files|crime
+ch. 373|Cold Case Files|crime
+ch. 376|The New Detectives|crime
+ch. 379|Unsolved Mysteries|crime
+ch. 381|Dog the bounty hunter|crime
+ch. 385|Midsomer Murders|crime
+ch. 395|Court TV|crime
+
+ch. 450|Funny AF|comedy
+ch. 455|TV Land Sitcoms|comedy
+ch. 458|Slightly Off IFC|comedy
+ch. 462|Laugh out Loud! Network|comedy
+ch. 465|Comedy Central Pluto tv|comedy
+ch. 466|Comedy Central Stand-Up|comedy
+ch. 468|Stand Up|comedy
+ch. 470|tosh.O|comedy
+ch. 480|Wild’N Out|comedy
+ch. 488|MST3K|comedy
+ch. 489|Rifftrax|comedy
+ch. 494|AFV TV|comedy
+ch. 498|Fail Army|comedy
+
+ch. 501|Classic TC Comedy|classic tv
+ch. 506|One day at a time|classic tv
+ch. 508|Threes Company|classic tv
+ch. 511|The Addams Family|classic tv
+ch. 514|Johnny Carson TV|classic tv
+ch. 516|The Carol Burnett Show|classic tv
+ch. 518|The Bob Ross channel|classic tv
+ch. 520|Classic TV|classic tv
+ch. 526|Western|classic tv
+ch. 529|The Rifleman|classic tv
+ch. 532|Doctor Who Classic|classic tv
+ch. 535|Dark Shadows|classic tv
+ch. 540|BuzzR|classic tv
+ch. 542|Shout TV|classic tv
+ch. 548|Classic Toons|classic tv
+
+ch. 601|Food TV|home & DIY
+ch. 605|Americas Test Kitchen|home & DIY
+ch. 612|Frontdoor|home & DIY
+ch. 614|Dabl|home & DIY
+ch. 615|Lively Place|home & DIY
+ch. 616|The Design Network|home & DIY
+ch. 618|This Old House|home & DIY
+ch. 621|Antiques Roadshow|home & DIY
+ch. 630|Pluto Best Life|home & DIY
+ch. 632|Weddings|home & DIY
+ch. 635|Cats 24/7|home & DIY
+ch. 636|Dogs 24/7|home & DIY
+ch. 637|the pet collective|home & DIY
+ch. 643|Faith TV|home & DIY
+ch. 644|TBN|home & DIY
+
+ch. 651|History|explore
+ch. 655|Military|explore
+ch. 663|Cars|explore
+ch. 666|Animals|explore
+ch. 669|Pluto Paranormal|explore
+ch. 672|Science|explore
+ch. 675|Adventure tv|explore
+ch. 678|Travel|explore
+ch. 681|Voyager documentaries|explore
+ch. 686|Awe Encore|explore
+ch. 687|Chassy|explore
+ch. 690|Nasa TV|explore
+ch. 692|naturescape|explore
+ch. 694|loupe|explore
+ch. 696|Slow TV|explore
+
+ch. 702|CBS sports HQ|sports
+ch. 705|Fox Sports|sports
+ch. 708|NFL channel|sports
+ch. 712|Major league soccer|sports
+ch. 713|PGA tour|sports
+ch. 725|pluot tv sports|sports
+ch. 726|fight|sports
+ch. 730|Bellator MMA|sports
+ch. 734|Impact wrestling|sports
+ch. 736|Glory Kickboxing|sports
+ch. 740|bein sports extra|sports
+ch. 745|fubo sports network|sports
+ch. 748|Stadium|sports
+ch. 752|big sky conference|sports
+ch. 755|back Country|sports
+ch. 756|pursuit Up|sports
+ch. 759|SURF|sports
+ch. 762|Red Bull TV|sports
+ch. 770|World Poker Tour|sports
+
+ch. 801|Pluto tv gamer|Gaming & Anime
+ch. 805|IGN|Gaming & Anime
+ch. 806|Gamespot|Gaming & Anime
+ch. 815|minecrafTV|Gaming & Anime
+ch. 816|Play Roblox|Gaming & Anime
+ch. 817|Gameplay Fortnite|Gaming & Anime
+ch. 818|Gameplay Sports|Gaming & Anime
+ch. 819|Gameplay Call of Duty|Gaming & Anime
+ch. 830|Anime All Day|Gaming & Anime
+ch. 836|Naruto|Gaming & Anime
+ch. 848|Tokushoutsu|Gaming & Anime
+
+ch. 855|Live music Replay|music
+ch. 867|CMT Equal Play|music
+ch. 868|MTV block party|music
+ch. 869|MTV spankin’ New|music
+ch. 870|MTV Biggest POP|music
+ch. 873|Yo! MTV|music
+ch. 885|Vevo Pop|music
+ch. 888|Vevo Raggaeton and Trap|music
+ch. 890|vevo R&B|music
+ch. 892|Vevo Country|music
+ch. 895|Vevo 70s|music
+ch. 898|Hillsong Channel|music
+ch. 899|Pluto TV|music
+
+ch. 900|Pluto 007|latino
+ch. 901|Cine Estelar|latino
+ch. 902|Cine|latino
+ch. 904|Cine Accion|latino
+ch. 913|Cine Terror|latino
+ch. 920|Nuestra Vision (NV)|latino
+ch. 925|The Walking Dead espanol|latino
+ch. 927|Narcos (LAS)|latino
+ch. 933|forensic file espanol|latino
+ch. 934|Unsoved Mysteries en spanol|latino
+ch. 936|investiga|latino
+ch. 940|Telenovelas Clasicas|latino
+ch. 941|novelas romance|latino
+ch. 942|novelas drama|latino
+ch. 943|novelas thriller|latino
+ch. 944|Narco novelas|latino
+ch. 950|Spike Aventura|latino
+ch. 953|Realities en espanol|latino
+ch. 956|cocina|latino
+ch. 959|mundo|latino
+ch. 962|Naturaleza|latino
+ch. 965|MTV latino|latino
+ch. 967|Comedy Central Latino|latino
+ch. 970|Combate world|latino
+ch. 971|AAA|latino
+
+ch. 976|Kids Animation|kids
+ch. 977|nick Pluto tv|kids
+ch. 978|nick jr. pluto tv|kids
+ch. 983|Totally turtles|kids
+ch. 985|Dora tv|kids
+ch. 989|Kids|kids
+ch. 990|After School Cartoons|kids
+ch. 991|tween|kids
+ch. 993| pocketwatch|kids
+ch. 995|little baby bum|kids
+ch. 997|nick latino|kids
+ch. 998|nick jr. latino|kids
+ch. 1021|CBSN Bay Area|locals
+ch. 1022|CBSN Boston|locals
+ch. 1023|CBSN Chicago|locals
+ch. 1024|CBSN Dallas FT-Worth|locals
+ch. 1025|CBSN Denver|locals
+ch. 1026|CBSN Los Angeles|locals
+ch. 1028|CBSN Minnesota|locals
+ch. 1029|CBSN New York|locals
+ch. 1030|CBSN Philly|locals
+ch. 1031|CBSN Pittsburgh|locals
