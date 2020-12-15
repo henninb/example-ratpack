@@ -18,7 +18,7 @@ class GormModule extends AbstractModule {
     protected void configure() {}
 
     @Provides
-    HibernateDatastore hibernateDatastore() {
+    static HibernateDatastore hibernateDatastore() {
         Map<String, Object> configuration = [
                 'hibernate.hbm2ddl.auto':'update',
                 'dataSource.driverClassName':'org.postgresql.Driver',

@@ -43,6 +43,7 @@ dependencies {
     //postgres
     runtimeOnly("org.postgresql:postgresql:${postgresqlVersion}")
 
+    implementation group: 'com.h2database', name: 'h2', version: '1.4.200'
     //hibernate
     //implementation("org.hibernate:hibernate-core:${hibernateVersion}")
     implementation("org.grails:grails-datastore-gorm-hibernate5:7.0.1.RELEASE")

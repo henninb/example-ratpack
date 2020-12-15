@@ -11,24 +11,33 @@ import ratpack.service.StartEvent
 @CompileStatic
 class CategoryService implements Service {
 
+
     void onStart(StartEvent e) throws Exception {
         println 'Category Service onStart'
         e.getRegistry().get(HibernateDatastore)
         Blocking.exec {
+                Category.withNewSession {
+                Category category = new Category()
+                //category.categoryId = 1180
+                category.category = 'save-it'
+                category.activeStatus = true
+                Category category1 = category.save()
+                println category1.category
+            }
             //populateWithSampleData()
-            Category category = new Category()
-            //category.categoryId = 1176
-            category.category = 'stuff'
-            category.activeStatus = true
-            Category category1 = category.save()
-            println category1
+//            Category category = new Category()
+//            //category.categoryId = 1176
+//            category.category = 'stuff'
+//            category.activeStatus = true
+//            Category category1 = category.save()
+
             println 'completed added foo - with save()'
         }
         println 'completed added foo'
     }
 
 //    @Transactional
-//    void populateWithSampleData() {
+//    static void populateWithSampleData() {
 //        Category category = new Category()
 //        category.category = 'foo'
 //        category.activeStatus = true

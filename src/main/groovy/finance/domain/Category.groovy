@@ -13,7 +13,7 @@ import org.grails.datastore.gorm.GormEntity
 //@CompileStatic
 @Entity
 class Category implements GormEntity<Category> {
-    Long categoryId
+    //Long categoryId
     String category
     Boolean activeStatus
 }

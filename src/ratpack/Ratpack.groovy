@@ -2,15 +2,20 @@ import com.zaxxer.hikari.HikariConfig
 import finance.modules.GormModule
 import finance.services.CategoryService
 import finance.services.ExampleService
+import finance.domain.Category
 import groovy.sql.Sql
+import org.grails.orm.hibernate.HibernateDatastore
 import postgres.PostgresConfig
 import postgres.PostgresModule
 import ratpack.config.ConfigData
 import ratpack.config.ConfigDataBuilder
+import ratpack.exec.Blocking
 import ratpack.groovy.template.MarkupTemplateModule
 import ratpack.health.HealthCheckHandler
 import ratpack.hikari.HikariModule
 import ratpack.handling.Context
+import ratpack.service.Service
+import ratpack.service.StartEvent
 
 import javax.sql.DataSource
 import java.sql.Connection
@@ -41,6 +46,24 @@ ratpack {
 
         module MarkupTemplateModule
         module GormModule
+
+        bindInstance new Service() {
+            void onStart(StartEvent e) throws Exception {
+                e.getRegistry().get(HibernateDatastore)
+                Blocking.exec {
+                    Category.withNewSession {
+                        //if( !Person.count() ) {
+                        new Category(category: "test-me", activeStatus: true).save()
+                        //new Person(firstName: "Homer", lastName: "Simpson").save(flush:true)
+                        //new Person(firstName: "Liza", lastName: "Simpson").save(flush:true)
+                        //}
+                    }
+                }
+            }
+        }
+
+
+
         module(HikariModule) { config ->
             config.dataSourceClassName = 'org.postgresql.ds.PGPoolingDataSource'
 
@@ -67,7 +90,7 @@ ratpack {
         bind(ExampleService)
 
 
-        bind(CategoryService)
+        //bind(CategoryService)
     }
 
     handlers {
