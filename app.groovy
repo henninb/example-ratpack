@@ -5,11 +5,21 @@
 @Grab('org.slf4j:slf4j-simple:1.7.0')
 @Grab('org.postgresql:postgresql:42.2.18')
 @Grab('org.xerial:sqlite-jdbc:3.34.0')
+@Grab('com.fasterxml.jackson.core:jackson-databind:2.12.0')
 //@Grab('ch.qos.logback:logback-classic:1.2.3')
 
 import static ratpack.groovy.Groovy.ratpack
 import java.sql.*
 import groovy.sql.Sql
+import com.fasterxml.jackson.databind.*
+import com.fasterxml.jackson.core.type.*
+
+def mapper = new ObjectMapper()
+
+class Channel {
+    String description
+    String category
+}
 
 void exampleFunction() {
   println('test')
@@ -27,12 +37,29 @@ void exampleFunction() {
   }
 }
 
+String findChannel() {
+   def result = ""
+   def mapper = new ObjectMapper()
+
+  def sql = Sql.newInstance("jdbc:sqlite:pluto.db", "org.sqlite.JDBC")
+  sql.eachRow("select * from t_channel where channel=50") {
+    // result = ("description=${it.description}, category=${it.category}")
+     Channel channel = new Channel()
+      channel.description = it.description
+      channel.category = it.category
+     result = mapper.writeValueAsString(channel)
+  }
+  return result
+}
 //curl 'http://localhost:5050'
 ratpack {
   handlers {
     get {
        exampleFunction()
        render "hello world"
+    }
+    get('channel') {
+        render findChannel()
     }
   }
 }
