@@ -9,10 +9,8 @@
 //@Grab('ch.qos.logback:logback-classic:1.2.3')
 
 import static ratpack.groovy.Groovy.ratpack
-//import java.sql.*
 import groovy.sql.Sql
 import com.fasterxml.jackson.databind.*
-//import com.fasterxml.jackson.core.type.*
 
 class Channel {
     String description
@@ -40,9 +38,8 @@ String findChannel(String number = 50) {
     String result = ""
     ObjectMapper mapper = new ObjectMapper()
 
-
     Sql sql = Sql.newInstance("jdbc:sqlite:pluto.db", "org.sqlite.JDBC")
-    sql.eachRow("SELECT * from t_channel WHERE channel=:number", [number:number]) {
+    sql.eachRow("SELECT * from t_channel WHERE channel=:number", [number: number]) {
         Channel channel = new Channel()
         channel.description = it.description
         channel.category = it.category
@@ -57,7 +54,7 @@ String findCategoryChannels(String category = 'explore') {
     ObjectMapper mapper = new ObjectMapper()
 
     Sql sql = Sql.newInstance("jdbc:sqlite:pluto.db", "org.sqlite.JDBC")
-    sql.eachRow("SELECT * from t_channel WHERE category=:category", [category:category]) {
+    sql.eachRow("SELECT * from t_channel WHERE category=:category", [category: category]) {
         Channel channel = new Channel()
         channel.description = it.description
         channel.category = it.category
