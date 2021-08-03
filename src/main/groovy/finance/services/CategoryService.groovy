@@ -1,19 +1,20 @@
 package finance.services
 
 import finance.domain.Category
-import grails.gorm.transactions.Transactional
 import groovy.transform.CompileStatic
+import groovy.util.logging.Log
 import org.grails.orm.hibernate.HibernateDatastore
 import ratpack.exec.Blocking
 import ratpack.service.Service
 import ratpack.service.StartEvent
 
+@Log
 @CompileStatic
 class CategoryService implements Service {
 
 
     void onStart(StartEvent e) throws Exception {
-        println 'Category Service onStart'
+        log.info 'Category Service onStart'
         e.getRegistry().get(HibernateDatastore)
         Blocking.exec {
                 Category.withNewSession {
@@ -22,7 +23,7 @@ class CategoryService implements Service {
                 category.category = 'save-it'
                 category.activeStatus = true
                 Category category1 = category.save()
-                println category1.category
+                log.info category1.category
             }
             //populateWithSampleData()
 //            Category category = new Category()
@@ -31,9 +32,13 @@ class CategoryService implements Service {
 //            category.activeStatus = true
 //            Category category1 = category.save()
 
-            println 'completed added foo - with save()'
+            log.info( 'completed added foo - with save()')
         }
-        println 'completed added foo'
+        log.info 'completed added foo'
+    }
+
+    static int addNumbers(int x, int y) {
+        return x+y;
     }
 
 //    @Transactional

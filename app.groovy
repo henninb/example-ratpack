@@ -2,11 +2,14 @@
 
 @GrabConfig(systemClassLoader = true)
 @Grab('io.ratpack:ratpack-groovy:1.8.0')
+// @Grab('org.codehaus.groovy:groovy-all:3.0.7')
 @Grab('org.slf4j:slf4j-simple:1.7.0')
 //@Grab('org.postgresql:postgresql:42.2.18')
 @Grab('org.xerial:sqlite-jdbc:3.34.0')
 @Grab('com.fasterxml.jackson.core:jackson-databind:2.12.0')
 //@Grab('ch.qos.logback:logback-classic:1.2.3')
+    // System.err.close();
+    // System.setErr(System.out);
 
 import static ratpack.groovy.Groovy.ratpack
 import groovy.sql.Sql

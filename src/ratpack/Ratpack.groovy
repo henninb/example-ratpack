@@ -29,8 +29,7 @@ import static ratpack.groovy.Groovy.ratpack
 ratpack {
     serverConfig {
         port(5050)
-        json('dbconfig.json')
-        //require("/daatabase", PostgresConfig)
+        json('db_config.json')
     }
     bindings {
 
