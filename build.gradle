@@ -50,6 +50,7 @@ dependencies {
 
     //postgreSQL
     runtimeOnly("org.postgresql:postgresql:${postgresqlVersion}")
+    jooqGenerator "org.postgresql:postgresql:${postgresqlVersion}"
 
     //H2
     implementation "com.h2database:h2:${h2Version}"
@@ -61,6 +62,39 @@ dependencies {
 
 
 jooq {
-    version = "${jooqVersion}" // the default (can be omitted)
-    edition = JooqEdition.OSS  // the default (can be omitted)
+    version = "${jooqVersion}"
+    edition = JooqEdition.OSS
+    configurations {
+        main {
+            generateSchemaSourceOnCompilation = true
+
+               generationTool {
+                   jdbc {
+                       driver = 'org.postgresql.Driver'
+                       url = 'jdbc:postgresql://localhost:5432/finance_test_db'
+                       user = 'henninb'
+                       password = 'monday1'
+                   }
+
+                   generator {
+                       name = 'org.jooq.codegen.DefaultGenerator'
+                       database {
+                            name = 'org.jooq.meta.postgres.PostgresDatabase'
+                            inputSchema = 'func'
+                            includes = 't_category'
+                            excludes = ''
+                       }
+                       generate {
+                           deprecated = false
+                           records = true
+                           immutablePojos = true
+                           fluentSetters = true
+                       }
+
+                       strategy.name = 'org.jooq.codegen.DefaultGeneratorStrategy'
+                   }
+              }
+        }
+
+    }
 }
