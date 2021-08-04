@@ -67,7 +67,7 @@ ratpack {
             config.dataSourceClassName = 'org.postgresql.ds.PGPoolingDataSource'
 
             config.addDataSourceProperty("serverName", "localhost")
-            config.addDataSourceProperty("databaseName", "finance_db")
+            config.addDataSourceProperty("databaseName", "finance_test_db")
             config.addDataSourceProperty("portNumber", "5432")
             config.addDataSourceProperty("user", "henninb")
             config.addDataSourceProperty("password", "monday1")
@@ -87,7 +87,6 @@ ratpack {
         }
 
         bind(ExampleService)
-
 
         //bind(CategoryService)
     }

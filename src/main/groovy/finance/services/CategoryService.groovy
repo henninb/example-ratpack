@@ -38,7 +38,7 @@ class CategoryService implements Service {
     }
 
     static int addNumbers(int x, int y) {
-        return x+y;
+        return x+y
     }
 
 //    @Transactional
